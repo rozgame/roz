@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>測試 / Sound Manager 2</title>
+<script src="../soundmanagerv297a-20130512/script/soundmanager2.js"></script>
+<script>
+soundManager.setup({
+  url: '../soundmanagerv297a-20130512/swf/soundmanager2.swf',
+  // optional: use 100% HTML5 mode where available
+  // preferFlash: false,
+  onready: function() {
+    var mySound = soundManager.createSound({
+      id: 'aSound',
+      url: 'https://dl.dropboxusercontent.com/u/185498838/Duet/music/duet_bgm_all.mp3'
+    });
+    mySound.play();
+  },
+  ontimeout: function() {
+    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
+  }
+});
+</script>
+</head>
+
+<body>
+</body>
+</html>

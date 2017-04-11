@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/*
+京都アニメーション
+Copyright (C) Kyoto Animaion Co.,Ltd. All Rights Reserved.
+*/
+
+/*
+font-size list (base: 12px)
+ 67% =  8px
+ 75% =  9px
+ 83% = 10px
+ 92% = 11px        175% = 21px
+100% = 12px        184% = 22px
+108% = 13px        192% = 23px
+117% = 14px        200% = 24px
+125% = 15px        209% = 25px
+133% = 16px        217% = 26px
+142% = 17px
+150% = 18px
+159% = 19px
+167% = 20px
+*/
+
+/* ---------------------------
+gallery setting
+--------------------------- */
+#galleryContentList { padding: 40px 30px 10px; }
+	#galleryContentList li {
+		margin-bottom: 30px;
+		padding-left: 10px;
+		border-left: 5px #333 solid;
+		font-size: 167%;
+		font-weight: bold;
+	}
+		#galleryContentList li a { color: #0075c2; }
+		#galleryContentList li a:hover { color: #e7336e; }
+		#galleryContentList li img { vertical-align: middle; }

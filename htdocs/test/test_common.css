@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+CSS 參考網頁：
+GALLERY - ギャラリー | TVアニメ『中二病でも恋がしたい
+http://www.anime-chu-2.com/gallery/keyVisual/
+該頁面的 CSS 檔案：
+http://www.anime-chu-2.com/css/common.css
+版權所有：
+京都アニメーション
+Copyright (C) Kyoto Animaion Co.,Ltd. All Rights Reserved.
+*/
+
+/*
+div.hr {display: none}
+/*//*/a{}
+div.hr {
+  display: block;
+  height: 36px;
+  background-image: url(images/hr.png);
+  background-repeat: no-repeat;
+  background-position: left left;
+  margin: 1em 0 1em 0;
+}
+hr {display:none}
+*/
+
+/*****背景圖片/網站主體*****/
+
+html, body { height: 100%;}
+body {
+	margin: 0;
+	padding: 0;
+}
+#bg {
+	position: fixed;
+	top:0px; /*別改這個數字，否則縮放時會有破綻*/
+	width: 100%;
+	height: 100%;
+	z-index:-1;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.default {
+	background: url(../images/default.jpg) no-repeat #000;
+}

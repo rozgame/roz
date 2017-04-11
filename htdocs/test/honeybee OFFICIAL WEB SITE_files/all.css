@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin: 0; padding: 0; }
+body {
+	background: #FFF url(../img/bg.jpg);
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.7;
+	color:#333;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	border-top: 3px solid #C2DFDA;
+}
+hr { display: none; }
+ul { list-style: none; }
+img { border: none; }
+
+/*リンク設定
+----------------------------------------------*/
+a {
+	color: #3FA9F5;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+a:hover {
+	color: #FF7BAC;
+}
+
+a:hover.ov img{
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	-ms-filter: "alpha( opacity=60 )";
+	background:none!important;
+}
+
+/*テキスト選択色
+----------------------------------------------*/
+::selection {
+	background: #E2EFE6;
+}
+::-moz-selection {
+	background: #E2EFE6;
+}
+
+/*テキスト設定
+----------------------------------------------*/
+em {
+	color: #F39;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/*ページ設定
+----------------------------------------------*/
+#all {
+	width: 100%;
+	border-top: 2px solid #E2EFE6;
+}
+#page {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+}
+
+/*メニュー周辺
+----------------------------------------------*/
+h1 {
+	position: absolute;
+	top: 43px;
+	left: 433px;
+}
+h1 a {
+	background: url(../img/honeybee.png) no-repeat;
+	display: block;
+	width: 92px;
+	height: 126px;
+	text-indent: -9999px;
+}
+h1 a:hover {
+	background: url(../img/honeybee.png) no-repeat 0 -126px;
+}
+
+#menu {
+	background: url(../img/menu_bg.jpg) no-repeat 50% 0;
+	width: 960px;
+	height: 185px;
+	margin-bottom: 20px;
+}
+#menu1 {}
+#menu2 { position: absolute; top: 0; left: 204px; }
+#menu3 { position: absolute; top: 0; left: 562px; }
+#menu4 { position: absolute; top: 0; left: 766px; }
+
+#order {
+	position: fixed;
+	top: 0;
+	right: 10%;
+	z-index: 100;
+}
+#order a {
+	background: url(../img/order.png) no-repeat 0 -50px;
+	display: block;
+	width: 140px;
+	height: 100px;
+	position: relative;
+}
+#order img {
+	position: absolute;
+	top: 25px;
+	left: -25px;
+	display: none;
+}
+#order a:hover {
+	background: url(../img/order.png) no-repeat 0 -20px;
+}
+
+
+/*Go top
+----------------------------------------------*/
+.goTop {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+/*フッター
+----------------------------------------------*/
+#foot {
+	font-size: 10px;
+	width: 100%;
+	padding: 15px 0;
+	margin-bottom: 50px;
+	border-top: 1px solid #E2EFE6;
+	border-bottom: 1px solid #E2EFE6;
+}
+
+/*カレンダー　位置
+----------------------------------------------*/
+.tip_trigger {
+	position: absolute;
+}
+
+.week4 { top: 149px; }
+.week5 { top: 180px; }
+.thurs { left: 170px; }
+.fri { left: 208px; }
+
+
+/*カレンダー　フキダシ
+----------------------------------------------*/
+.tip {
+    color: #333;
+	font-size: 10px;
+	text-align: center;
+	width: 200px;
+    background: #E2EFE6;
+    display: none; /*--基本は非表示--*/
+    padding: 10px;
+    position: absolute;
+	z-index: 1000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.tip img {
+	position: absolute;
+	top: -11px;
+	left: 170px;
+}
+.tip span {
+	color: #C2DFDA;
+}
+
+
+/*サブページ
+----------------------------------------------*/
+h2 {
+	width: 960px;
+	height: 57px;
+	text-indent: -9999px;
+	margin-bottom: 20px;
+}
+
+.area {
+	background: #fff;
+	width: 700px;
+	padding: 0px 130px 50px;
+	border-top: 10px solid #EFE9DB;
+	margin-bottom: 50px;
+/*----clearfix-----*/
+_height: 1px;
+min-height: 1px;
+}
+.area:after {
+content: ".";
+display: block;
+clear: both;
+height: 0;
+visibility: hidden;
+}
+/*----clearfix-----*/
+.area h3 {
+	background: url(../img/sub_title.png) no-repeat 0 100%;
+	width: 700px;
+	padding-bottom: 5px;
+	color: #9F823C;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 70px 0px 20px;
+}
+.area p,.area dd {
+	margin-bottom: 1.2em;
+}
+.area strong {
+	color: #288E7C;
+}
+.area em {
+	font-style: normal;
+	color: #FF7BAC;
+}
+.area dt {
+	font-weight: bold;
+	color: #288E7C;
+}
+.area dd {
+	padding-left: 2em;
+}
+.area li {
+	background: url(../img/list.png) no-repeat 0px 5px;
+	padding-left: 1em;
+}
+.signature {
+	text-align: right;
+}
+.areaLine {
+	text-align: center;
+}
+
+
+
+
+

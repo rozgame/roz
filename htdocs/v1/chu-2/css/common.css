@@ -1,0 +1,337 @@
+@charset "UTF-8";
+
+/*
+京都アニメーション
+Copyright (C) Kyoto Animaion Co.,Ltd. All Rights Reserved.
+*/
+
+/*
+font-size list (base: 12px)
+ 67% =  8px
+ 75% =  9px
+ 83% = 10px
+ 92% = 11px        175% = 21px
+100% = 12px        184% = 22px
+108% = 13px        192% = 23px
+117% = 14px        200% = 24px
+125% = 15px        209% = 25px
+133% = 16px        217% = 26px
+142% = 17px
+150% = 18px
+159% = 19px
+167% = 20px
+*/
+
+/* ---------------------------
+base setting
+--------------------------- */
+html, body { height: 100%; }
+#bg {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: -999;
+}
+.default {
+	background: url(../img/bg/default.jpg) no-repeat #000;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg/default.jpg', sizingMethod='scale'); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg/default.jpg', sizingMethod='scale')";
+}
+::selection {
+	color: #f19ec2;
+	background: rgba(0, 117, 194, 0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F00B1C2,endColorstr=#7F00B1C2);
+}
+::-moz-selection {
+	color: #f19ec2;
+	background: rgba(0, 117, 194, 0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F00B1C2,endColorstr=#7F00B1C2);
+}
+
+/* ---------------------------
+clearfix setting
+--------------------------- */
+.clearfix, #globalHeader { zoom: 1; }
+.clearfix:before, .clearfix:after, #globalHeader:before, #globalHeader:after {
+	content: "";
+	display: table;
+	overflow: hidden;
+}
+.clearfix:after, #globalHeader:after { clear: both; }
+
+/* ---------------------------
+global navigation setting
+--------------------------- */
+#globalNavWrap {
+	position: fixed;
+	width: 100%;
+	border-bottom: 1px #999 solid;
+	background: #000;
+	z-index: 99;
+}
+#menuList { float: right; }
+	#menuList > li {
+		position: relative;
+		float: left;
+	}
+/*	#menuList > .new { background: url(../img/icon/new.gif) no-repeat center 32px; }*/
+	#menuList > .updated { background: url(../img/icon/updated.gif) no-repeat center 32px; }
+		#menuList > li > a {
+			display: block;
+			padding: 10px 15px;
+			text-align: center;
+			color: #fff;
+			font-size: 125%;
+			font-family: 'PT Sans', sans-serif;
+			font-weight: 700;
+			-webkit-transition: 0.3s;
+			-moz-transition: 0.3s;
+			-o-transition: 0.3s;
+		}
+		#menuList > li > a:hover, #menuList > li > .current, #menuList > li > .selected {
+			color: #666;
+			background: rgba(0, 80, 164, 0.8);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC0050A4,endColorstr=#CC0050A4);
+			-webkit-transition: 0.4s;
+			-moz-transition: 0.4s;
+			-o-transition: 0.4s;
+		}
+		#menuList > li > .disabled { color: #666; }
+		#menuList > li > .disabled:hover {
+			background: none;
+			cursor: default;
+		}
+		#menuList > li > a:active {
+			background: rgba(231, 51, 110, 0.8);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCE7336E,endColorstr=#CCE7336E);
+		}
+		#menuList-05 .subMenuList { width: 200px; }
+		#menuList-07 .subMenuList {
+			right: 0;
+			width: 200px;
+		}
+		.subMenuList {
+			display: none;
+			position: absolute;
+			top: 42px;
+			padding: 10px 0;
+			background: rgba(0, 0, 0, 0.7);
+			background: url(../img/globalNav/subMenuBg.png) repeat\9;
+			border-radius: 0 0 5px 5px;
+			z-index: 99;
+		}
+			.subMenuList li { position: relative; }
+			.subMenuList .new { background: url(../img/icon/new.gif) no-repeat 26px 28px; }
+			.subMenuList .updated { background: url(../img/icon/updated.gif) no-repeat 26px 28px; }
+				.subMenuList li a {
+					display: block;
+					padding: 5px 10px 15px;
+					color: #fff;
+					-webkit-transition: 0.2s;
+					-moz-transition: 0.2s;
+					-o-transition: 0.2s;
+				}
+				.subMenuList li a:hover {
+					color: #f19ec2;
+					background: rgba(0, 117, 194, 0.5);
+					background: url(../img/globalNav/subMenuListBg.png) repeat\9;
+					-webkit-transition: 0.3s;
+					-moz-transition: 0.3s;
+					-o-transition: 0.3s;
+				}
+					.subMenuList li a .cross {
+						display: inline-block;
+						*display: inline;
+						*zoom: 1;
+						margin-right: 3px;
+						-webkit-transform: translate3d(0);
+						-moz-transform:  translate3d(0);
+						-webkit-animation: 'crossRotate' 3s linear infinite;
+						-moz-animation: crossRotate 3s linear infinite;
+					}
+					.subMenuList li:nth-of-type(2) a .cross { -webkit-animation-delay: 0.5s; -moz-animation-delay: 0.5s; }
+					.subMenuList li:nth-of-type(3) a .cross { -webkit-animation-delay: 1s; -moz-animation-delay: 1s; }
+					.subMenuList li:nth-of-type(4) a .cross { -webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; }
+					.subMenuList li:nth-of-type(5) a .cross { -webkit-animation-delay: 2s; -moz-animation-delay: 2s; }
+					.subMenuList li:nth-of-type(6) a .cross { -webkit-animation-delay: 2.5s; -moz-animation-delay: 2.5s; }
+					.subMenuList li:nth-of-type(7) a .cross { -webkit-animation-delay: 3s; -moz-animation-delay: 3s; }
+					.subMenuList li:nth-of-type(8) a .cross { -webkit-animation-delay: 3.5s; -moz-animation-delay: 3.5s; }
+					.subMenuList li:nth-of-type(9) a .cross { -webkit-animation-delay: 4s; -moz-animation-delay: 4s; }
+					.subMenuList li:nth-of-type(10) a .cross { -webkit-animation-delay: 4.5s; -moz-animation-delay: 4.5s; }
+					.subMenuList li:nth-of-type(11) a .cross { -webkit-animation-delay: 5s; -moz-animation-delay: 5s; }
+					@-webkit-keyframes 'crossRotate' {
+						0%   { -webkit-transform: translateY(0) rotate(0) scale(1, 1); }
+						15%  { -webkit-transform: translateY(-5px) rotate(180deg) scale(1, 1); }
+						30%  { -webkit-transform: translateY(0) rotate(360deg) scale(1, 1); }
+						35%  { -webkit-transform: translateY(3px) rotate(360deg) scale(1.5, 0.7); } 
+						38%  { -webkit-transform: translateY(0) rotate(360deg) scale(1, 1); }
+						100% { -webkit-transform: translateY(0) rotate(360deg) scale(1, 1); }
+					}
+					@-moz-keyframes crossRotate {
+						0%   { -moz-transform: translateY(0) rotate(0) scale(1, 1); }
+						15%  { -moz-transform: translateY(-5px) rotate(180deg) scale(1, 1); }
+						30%  { -moz-transform: translateY(0) rotate(360deg) scale(1, 1); }
+						35%  { -moz-transform: translateY(3px) rotate(360deg) scale(1.5, 0.7); }
+						38%  { -moz-transform: translateY(0) rotate(360deg) scale(1, 1); }
+						100% { -moz-transform: translateY(0) rotate(360deg) scale(1, 1); }
+					}
+				.charaImg {
+					display: none;
+					position: absolute;
+					left: -55px;
+					top: -6px;
+					width: 50px;
+					height: 50px;
+					background: url(../img/globalNav/charaImgList.png);
+				}
+				#yuta     { background-position: 0 0; }
+				#rikka    { background-position: 0 -50px; }
+				.subEng {
+					position: absolute;
+					right: 5px;
+					bottom: 0;
+					color: #999;
+					font-size: 92%;
+					font-family: 'PT Sans', sans-serif;
+					font-weight: 400;
+					z-index: -1;
+				}
+
+/* ---------------------------
+content setting
+--------------------------- */
+#siteWrap {
+	display: none;
+	min-height: 100%;
+	height: auto !important; /*關鍵就是這一行，雖然我還看不懂它是什麼意思*/
+	height: 100%;
+}
+#contentWrap {
+	width: 100%;
+	padding: 43px 0 120px;
+}
+@media screen and (max-width: 850px) {
+	#contentWrap { padding-top: 85px; }
+}
+#globalHeader {
+	position: relative;
+	width: 980px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+	h1 {
+		float: left;
+		width: 300px;
+	}
+		h1 a {
+			display: block;
+			width: 300px;
+			transition: 0.2s linear;
+			-webkit-transition: 0.2s linear;
+			-moz-transition: 0.2s linear;
+			-o-transition: 0.2s linear;
+		}
+		h1 a:hover {
+			opacity: 0.6;
+			-moz-opacity: 0.6;
+			-ms-filter: 'alpha(opacity=60)';
+			transition: opacity 0.3s linear;
+			-webkit-transition: opacity 0.3s linear;
+			-moz-transition: opacity 0.3s linear;
+			-o-transition: opacity 0.3s linear;
+		}
+	#globalHeader h2 {
+		position: absolute;
+		right: 10px;
+		top: 30px;
+		text-align: right;
+		color: #0075c2;
+		font-size: 300%;
+		font-weight: bold;
+		opacity: 0.6;
+		-moz-opacity: 0.6;
+		-ms-filter: 'alpha(opacity=60)';
+	}
+#pankuzu {
+	position: absolute;
+	left: 320px;
+	bottom: 10px;
+}
+#pankuzuList {}
+	#pankuzuList li {
+		float: left;
+		padding-left: 10px;
+		font-size: 117%;
+	}
+		#pankuzuList li a { color: #0050a4; }
+		#pankuzuList li a:hover {
+			color: #e7336e;
+			text-decoration: underline;
+		}
+#contentBox {
+	position: relative;
+	width: 980px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto 20px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2) inset;
+	background: rgba(255, 255, 255, 0.8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF,endColorstr=#CCFFFFFF); /* IE 6/7 */
+}
+
+/* ---------------------------
+global footer setting
+--------------------------- */
+#globalFooterWrap {
+	position: absolute;
+	clear: both;
+	width: 100%;
+	min-width: 1000px;
+	margin-top: -120px; /* -120px 是因為 #globalFooter 高 120px */
+	background: url(../img/globalFooter/kyotoanimation.png) no-repeat 10px bottom #000;
+}
+#globalFooter {
+	position: relative;
+	width: 980px;
+	min-width: 1000px;
+	height: 120px;
+	margin: 0 auto;
+}
+	#globalFooter small {
+		display: block;
+		padding: 5px 0;
+		text-align: center;
+		color: #fff;
+		font-size: 83%;
+	}
+#corporateLink {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+	#corporateLink li { float: left; }
+		#corporateLink li a {
+			display: block;
+			margin: 0 5px;
+			padding-right: 10px;
+			border-right: 1px #fff dotted;
+			font-size: 92%;
+			color: #fff;
+		}
+			#corporateLink li a img { vertical-align: baseline;}
+		#corporateLink li .last {
+			padding: 0;
+			border: none;
+		}
+		#corporateLink li a:hover { text-decoration: underline; }

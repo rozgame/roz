@@ -1,0 +1,87 @@
+/* CSS Document */
+
+html, body { height: 100%; }
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div#bg {
+	position: fixed; /*固定*/
+	width: 100%;
+	height: 90%;
+	top: 3%;
+	background: url(../images/bg/bg_0.jpg) no-repeat bottom #f00;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: -1;
+}
+
+#side_v_wrap {
+	position: relative; /*position為static時z-index無效*/
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	z-index: 0;
+}
+#contentWrap {
+	width: 70%;
+	min-width: 980px; /*總寬度需加上padding*/
+	height: 100%;
+	margin: 0 auto;
+	padding: 30px 10px 70px 10px;
+}
+#content {
+}
+
+#headerWrap {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 3%;
+	z-index: 1;
+}
+#footerWrap {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 7%;
+	z-index: 1;
+}
+
+.side {
+	background-color: #000;
+}
+
+.box-shadow {
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+}
+.box-shadow_inset {
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+}
+.box-shade {
+	-moz-border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+	-webkit-border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+	border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+}
+
+div.table { display:table; }
+div.tr { display:table-row; }
+div.td { display:table-cell; }
+/***** 以下為測試用 *****/
+.test, table.test td { border-width:thin; }
+	table.test { border-collapse:collapse; }
+._1, table._1 td { border-style:solid; }
+._2, table._2 td { border-style:dashed; }
+._3, table._3 td { border-style:dotted; }
+._c, table._c td { border-color: #00a1e9; }
+._m, table._m td { border-color: #e4007f; }
+._y, table._y td { border-color: #fff100; }
+._k, table._k td { border-color: #231815; }
+/***** 以上為測試用 *****/

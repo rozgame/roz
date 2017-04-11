@@ -1,0 +1,86 @@
+/* CSS Document */
+
+/*Modified from t3*/
+
+/*
+CSS 些許部分參考自網頁：
+GALLERY - ギャラリー | TVアニメ『中二病でも恋がしたい
+http://www.anime-chu-2.com/tv/gallery/keyVisual/
+該頁面的 CSS 檔案：
+http://www.anime-chu-2.com/tv/css/common.css
+京都アニメーション
+Copyright (C) Kyoto Animaion Co.,Ltd. All Rights Reserved.
+*/
+
+html, body { height: 100%; }
+body {
+	margin: 0;
+	padding: 0;
+}
+div#bg {
+	/*DIV size and position*/
+	position: fixed;
+	top: 3%;
+	left: 1%;
+	width: 98%;
+	height: 90%;
+	/*Background Image*/
+	background: url(../images/bg/bg_0.jpg) no-repeat bottom #000;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*Layers*/
+	z-index: -1;
+}
+.bg {
+	background: url(../images/bg/bg_0.jpg) no-repeat bottom #000;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+}
+#siteWrap {
+	width: 100%;
+	min-width: 1000px;
+	height: 100%;
+}
+
+#contentWrap {
+	width: 80%;
+}
+#content {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.side {
+	width: 5%;
+	background: #000;
+}
+
+.box-shadow {
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+}
+.box-shadow_inset {
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+}
+.box-shade {
+	-moz-border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+	-webkit-border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+	border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+}
+
+div.table { display: table; }
+div.tr { display: table-row; }
+div.td { display: table-cell; }
+
+/***** 以下為測試用 *****/
+.test { border-width: thin; }
+._1 { border-style:solid; }
+._2 { border-style:dashed; }
+/***** 以上為測試用 *****/

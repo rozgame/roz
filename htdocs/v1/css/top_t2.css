@@ -1,0 +1,95 @@
+/* CSS Document */
+
+/*
+CSS 些許部分參考自網頁：
+GALLERY - ギャラリー | TVアニメ『中二病でも恋がしたい
+http://www.anime-chu-2.com/tv/gallery/keyVisual/
+該頁面的 CSS 檔案：
+http://www.anime-chu-2.com/tv/css/common.css
+京都アニメーション
+Copyright (C) Kyoto Animaion Co.,Ltd. All Rights Reserved.
+*/
+
+html, body { height: 100%; }
+body {
+	margin: 0;
+	padding: 0;
+}
+div#bg {
+	/*DIV size and position*/
+	position: fixed;
+	left: 5%;
+	top: 3%;
+	width: 90%;
+	height: 90%;
+	/*Background Image*/
+	background: url(../images/bg/bg_0.jpg) no-repeat center #000; /*若不了解#000的用處，將它換為#f00看看，此處應該是用了多重背景影像的語法*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*Layers*/
+	z-index: -1;
+/**********
+觀察：
+┌	同樣設為 90%, 寬縮短的像素會比高縮短的像素還多 (用數學想一想便會明瞭: x>y => 0.9x > 0.9y => 0.1x > 0.1y)
+└	所以不用擔心周圍一圈一樣厚的黑邊，造成很不搭的類似相框一般的情形
+┌	left: 5%;
+│	top: 5%;
+│	width: 90%;
+│	height: 90%;
+│	都使用百分比時，DIV 水平垂直置中變得很容易 (和一般網路上討論的情形不一樣，一般不能用這麼多百分比)
+└	快速算法: (100%-90%)/2 = 5%
+┌	min-width: 1000px;
+│	寫 t3 時做的測試
+│	這樣視窗的確會在縮窄時出現捲軸，但背景 left:5% 以後就會跑位
+│	由於是 fixed 所以拉霸拉到右邊也不會跟著捲動，造成左邊有黑邊、背景走位的情形
+└	所以重點就變成上下黑邊可以fixed(真得嗎?)、左右黑邊必須static，以上是t3的嘗試方向
+*/
+}
+div#siteWrap {
+	/*DIV size and position*/
+	width: 100%;
+	height: 100%;
+	margin: 0px auto; /*置中*/
+}
+div#contentWrap {
+	/*DIV size and position*/
+	position: relative;
+	top: 3%;
+	width: 90%;
+	min-width: 1100px;
+	margin: 0px auto;
+	padding-bottom: 4%;
+/**********
+觀察：
+	縮放時，像素增長的比百分比快 (原先有用像素指定位置，縮放時會和以百分比指定位置的 bg 跑位)
+*/
+}
+div#content {
+	width: 1000px;
+	margin: 0px auto 0px auto;
+	padding: 20px;
+}
+
+.black_outter {
+	/*Background*/
+	background:rgba(0,0,0,1);
+	/*Effect*/
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7); /*別改了*/
+}
+.black_inner {
+	/*Effect*/
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset; /*別改了*/
+}
+
+/***** 以下為測試用 *****/
+.test { border-width: thin; }
+._1 { border-style: solid; }
+._2 { border-style: dashed; }
+._3 { border-style: dotted; }
+/***** 以上為測試用 *****/

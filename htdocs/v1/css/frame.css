@@ -1,0 +1,126 @@
+/* CSS Document */
+
+html, body { height: 100%; }
+body {
+	margin: 0;
+	padding: 0;
+}
+#a { height:inherit;}
+
+div#bg {
+	position: fixed; /*固定*/
+	width: 100%;
+	height: 90%;
+	top: 3%;
+	background: url(../images/bg/bg_1.jpg) no-repeat center #231815;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: -1;
+}
+
+#side_v_wrap {
+	position: relative; /*position為static時z-index無效*/
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	z-index: 0;
+}
+#contentWrap {
+	min-width: 980px; /*總寬度需加上padding*/
+	margin: 0 auto;
+	padding: 30px 10px 70px 10px;
+	height: 100%; /*↓為了子項目↓*/
+}
+#content {
+	position: relative;
+	width: 980px;
+	height: 100%; /*↓為了子項目↓*/
+	margin: 0 auto;
+}
+	#contentL {
+		float: left;
+		width: 30%;
+/*		height: 100%; /*沒設高的話，占的空間就不會被顯示，而且高不能設百分比，不知道原因*/
+	}
+	#contentR {
+		float: left;
+		width: 70%;
+		height: 100%; /*↓為了子項目↓*/
+	}
+		#contentFrame {
+			position: relative;
+			top: 55px;
+			left: 100px;
+			width: 500px;
+			height: 100%; /*為了你啊*/
+		}
+
+#headerWrap {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+#footerWrap {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.side {
+	background-color: #000;
+}
+
+.box-shadow {
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7);
+}
+.box-shadow_inset {
+	-moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	-webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+	box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.7) inset;
+}
+.box-shade {
+	-moz-border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+	-webkit-border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+	border-image: url("../images/box-shadow_i.png") 11 11 11 11;
+}
+
+div.table { display:table; }
+div.tr { display:table-row; }
+div.td { display:table-cell; }
+div.bgCompare {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	background: url(../images/bg/bgCompare/bgCp2_3.png) no-repeat top #231815;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: -1;
+}
+/***** 以下為測試用 *****/
+
+.test, table.test td { border-width:thin; }
+	table.test { border-collapse:collapse; }
+._1, table._1 td { border-style:solid; }
+._2, table._2 td { border-style:dashed; }
+._3, table._3 td { border-style:dotted; }
+._c, table._c td { border-color: #00a1e9; }
+._m, table._m td { border-color: #e4007f; }
+._y, table._y td { border-color: #fff100; }
+._k, table._k td { border-color: #231815; }
+
+.bg_c { background-color: rgba(0,161,233,0.3); }
+.bg_m { background-color: rgba(228,0,127,0.3); }
+.bg_y { background-color: rgba(255,241,0,0.3); }
+.bg_k { background-color: rgba(35,24,21,0.3); }
+
+/***** 以上為測試用 *****/

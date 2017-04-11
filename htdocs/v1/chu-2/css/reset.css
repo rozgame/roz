@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*
+京都アニメーション
+Copyright (C) Kyoto Animaion Co.,Ltd. All Rights Reserved.
+*/
+
+/*
+font-size list (base: 12px)
+ 67% =  8px
+ 75% =  9px
+ 83% = 10px
+ 92% = 11px        175% = 21px
+100% = 12px        184% = 22px
+108% = 13px        192% = 23px
+117% = 14px        200% = 24px
+125% = 15px        209% = 25px
+133% = 16px        217% = 26px
+142% = 17px
+150% = 18px
+159% = 19px
+167% = 20px
+*/
+
+/* html,body */
+html { overflow-y: scroll; }
+	/* HTML5 */
+	article, aside, canvas, details, figcaption, figure, header, footer, hgroup, menu, nav, section, summary, h1, h2, h3, h4, h5, h6 { display: block; }
+body {
+	background: #000;
+	color: #333;
+	font: 12px/1.5 Arial, Helvetica, sans-serif, 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro W3 ', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS P Gothic';
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	word-break: break-all;
+	-webkit-text-size-adjust: none;
+}
+	/* for IE7 */
+	*+html body {
+		font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS P Gothic';
+		font-size: 75%;
+	}
+	/* for IE6 */
+	* html body {
+		font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS P Gothic';
+		font-size: 75%;
+	}
+
+/* other */
+a {
+	overflow: hidden;
+	text-decoration: none;
+}
+a:active, a:focus { outline: none; }
+fieldset { border: 0; }
+a img, img {
+	border: 0;
+	vertical-align: top;
+}
+abbr, acronym { border: 0; }
+address, caption, cite, code, dfn, em, th, strong, var {
+	font-style: normal;
+	font-weight: normal;
+}
+blockquote, div, dl, dt, dd,
+h1, h2, h3, h4, h5, h6,
+ol, ul, li, p, pre, span, td, th,
+article, aside, canvas, details, figcaption, figure, header,
+footer,hgroup, menu, nav, section, summary, audio, video {
+	margin: 0;
+	padding: 0;
+}
+caption, th {
+	vertical-align: top;
+	text-align: left;
+}
+small { font-size: 100%; }
+code, kbd, pre, samp, tt {
+	font-family: monospace;
+	line-height: 100%;
+}
+hr { display: none; }
+	/* for IE7 */
+	*+html code, kbd, pre, samp, tt {
+		font-size: 108%;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+ol, ul { list-style: none; }
+q:before, q:after { content: ''; }
+
+/* form */
+button, fieldset, form, input, label, legend, select, textarea {
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* table */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 100%;
+}

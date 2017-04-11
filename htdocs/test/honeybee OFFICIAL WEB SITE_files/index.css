@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*メイン画像
+----------------------------------------------*/
+#slider{
+     background: url(../img/load.gif) no-repeat 50% 50%;
+	 width: 960px;
+	 height: 450px;
+	 margin-bottom: 30px;
+}
+#slider img { display:none; }
+
+
+/*中身
+----------------------------------------------*/
+#con {
+	width: 960px;
+	margin-bottom: 30px;
+/*----clearfix-----*/
+_height: 1px;
+min-height: 1px;
+}
+#con:after {
+content: ".";
+display: block;
+clear: both;
+height: 0;
+visibility: hidden;
+}
+/*----clearfix-----*/
+
+
+/*更新履歴
+----------------------------------------------*/
+#new {
+	width: 640px;
+	float: left;
+	height: 460px;
+	overflow: auto;
+	font-size: 12px;
+}
+#new dt {
+	font-weight: bold;
+}
+#new dd {
+	background: url(../../common/img/list.png) no-repeat 8px 5px;
+	padding: 0px 0px 5px 20px;
+	margin-bottom: 0.5em;
+	border-bottom: 1px dashed #E2EFE6;
+}
+
+/*右側
+----------------------------------------------*/
+#info {
+	width: 300px;
+	float: right;
+}
+
+#info p {
+	margin-bottom: 20px;
+}
+
+#calendar {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#contact {
+	text-align: right;
+}
+#contact li {
+	display: inline;
+	padding-left: 5px;
+}
+
+
